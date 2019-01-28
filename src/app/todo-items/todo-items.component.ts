@@ -9,19 +9,19 @@ import { TodoItem } from '../shared/todo-item';
 export class TodoItemsComponent implements OnInit {
   @Output() deleteTodoEvent = new EventEmitter();
 
-  @Input() items: TodoItem[]; 
-    constructor() { }
-    ngOnInit() {
-    }
-  
-    itemClick(item) {
-      item.done = !item.done;
-    }  
-    delete(item) {
-      this.deleteTodoEvent.emit(item);
-    }
+  @Input() items: TodoItem[];
+  constructor() { }
+  ngOnInit() {
+  }
 
-    
-  
+  itemClick(item) {
+    item.done = !item.done;
+  }
+  delete(item) {
+    this.deleteTodoEvent.emit(item);
+  }
+
+
+
 
 }
